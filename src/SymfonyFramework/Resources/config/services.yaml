@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true      
+        autoconfigure: true
+
+    Xver\PhpAppCoreBundle\:
+        resource: '../../../'
+        exclude:
+            - '../../../SymfonyFramework/'
+            - '../../../PhpAppCoreBundle.php'
