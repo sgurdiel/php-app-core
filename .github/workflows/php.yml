@@ -34,7 +34,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Setup devbox
-      uses: jetify-com/devbox-install-action@v0.16.0
+      uses: jetify-com/devbox-install-action@v0.14.0
       with:
         # Caching the entire Nix store in github based on your devbox.json
         enable-cache: true
