@@ -2,7 +2,9 @@
 
 namespace Xver\PhpAppCoreBundle\Exception\Domain;
 
+use Exception;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Throwable;
 
 final class DomainExceptionTranslator
 {
@@ -10,18 +12,18 @@ final class DomainExceptionTranslator
     {
         $message = $this->traverseExceptionTree($th, $translator);
 
-        return new \Exception($message, (int) $th->getCode());
+        return new Exception($message, (int) $th->getCode());
     }
 
     public function getTranslatedExceptionAsHtml(\Throwable $th, TranslatorInterface $translator): \Exception
     {
         $message = $this->traverseExceptionTree($th, $translator);
 
-        return new \Exception(nl2br($message), (int) $th->getCode());
+        return new Exception(nl2br($message), (int) $th->getCode());
     }
 
     private function traverseExceptionTree(
-        \Throwable $th,
+        Throwable $th,
         TranslatorInterface $translator,
         string $message = ''
     ): string {
