@@ -80,6 +80,12 @@ class EntityCollectionTest extends TestCase
         $entityObjectCollection->offsetGet('1');
     }
 
+    public function testOffsetGetWithInvalidOffsetReturnsNull(): void
+    {
+        $entityObjectCollection = new EntityCollection([]);
+        $this->assertNull($entityObjectCollection->offsetGet(1));
+    }
+
     public function testContainsWithInvalidArgumentThrowsException(): void
     {
         $entityObjectCollection = new EntityCollection([]);
