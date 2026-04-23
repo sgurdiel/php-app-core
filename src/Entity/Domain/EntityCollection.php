@@ -84,7 +84,14 @@ class EntityCollection extends ArrayCollection
             );
         }
 
-        return parent::offsetGet($offset);
+        if (false === $this->containsKey($offset)) {
+            return null;
+        }
+
+        /** @var TEntity $entity */
+        $entity = parent::offsetGet($offset);
+
+        return $entity;
     }
 
     #[\Override]
