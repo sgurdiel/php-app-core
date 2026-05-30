@@ -3,7 +3,7 @@
 namespace Xver\PhpAppCoreBundle;
 
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
-use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
+use Symfony\Component\DependencyInjection\Kernel\AbstractBundle;
 use Xver\PhpAppCoreBundle\SymfonyFramework\DependencyInjection\PhpAppCoreBundleExtension;
 
 final class PhpAppCoreBundle extends AbstractBundle
