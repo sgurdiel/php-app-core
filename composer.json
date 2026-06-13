@@ -5,7 +5,7 @@
     "keywords": [],
     "license": "AGPL-3.0-or-later",
     "require": {
-        "php": "^8.4",
+        "php": "^8.5",
         "doctrine/collections": "^2.2 || ^3.0",
         "symfony/translation": "^8.1",
         "symfony/http-kernel": "^8.1"
